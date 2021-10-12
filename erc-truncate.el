@@ -1,0 +1,1 @@
+/app/gnu-elpa/emacs/lisp/erc/erc-truncate.el
