@@ -872,8 +872,8 @@ See `erc-server-flood-margin' for other flood-related parameters.")
 ;; Script parameters
 
 (defcustom erc-startup-file-list
-  (list (concat user-emacs-directory ".ercrc.el")
-        (concat user-emacs-directory ".ercrc")
+  (list (locate-user-emacs-file ".ercrc.el")
+        (locate-user-emacs-file ".ercrc")
         "~/.ercrc.el" "~/.ercrc" ".ercrc.el" ".ercrc")
   "List of files to try for a startup script.
 The first existent and readable one will get executed.
@@ -3606,11 +3606,13 @@ other people should be displayed."
 
 (defun erc-cmd-QUERY (&optional user)
   "Open a query with USER.
-The type of query window/frame/etc will depend on the value of
-`erc-query-display'.
-
-If USER is omitted, close the current query buffer if one exists
-- except this is broken now ;-)"
+How the query is displayed (in a new window, frame, etc.) depends
+on the value of `erc-query-display'."
+  ;; FIXME: The doc string used to say at the end:
+  ;; "If USER is omitted, close the current query buffer if one exists
+  ;; - except this is broken now ;-)"
+  ;; Does it make sense to have that functionality?  What's wrong with
+  ;; `kill-buffer'?  If it makes sense, re-add it.  -- SK @ 2021-11-11
   (interactive
    (list (read-string "Start a query with: ")))
   (let ((session-buffer (erc-server-buffer))
