@@ -1,2 +1,0 @@
-@set ERCDIST from GNU ELPA
-@set EMACSVER
