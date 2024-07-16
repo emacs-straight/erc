@@ -1,0 +1,2 @@
+;; Generated package description from erc.el  -*- no-byte-compile: t -*-
+(define-package "erc" "5.6.1snapshot0.20240713.84449" "An Emacs Internet Relay Chat client" '((emacs "27.1") (compat "29.1.4.5")) :commit "f38c42d1c7a8413f63b1e56261850d3dbe8abef8" :authors '(("Alexander L. Belikoff" . "alexander@belikoff.net")) :maintainer '(("Amin Bandali" . "bandali@gnu.org") ("F. Jason Park" . "jp@neverwas.me")) :keywords '("irc" "chat" "client" "internet") :url "https://www.gnu.org/software/emacs/erc.html")
