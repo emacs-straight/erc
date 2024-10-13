@@ -1,4 +1,4 @@
-This is doc5q00sB.info, produced by makeinfo version 6.8 from erc.texi.
+This is dockCupHw.info, produced by makeinfo version 6.8 from erc.texi.
 
 This manual is for ERC 5.6.1 from GNU ELPA.
 
@@ -23,7 +23,7 @@ START-INFO-DIR-ENTRY
 END-INFO-DIR-ENTRY
 
 
-File: doc5q00sB.info,  Node: Top,  Next: Introduction,  Up: (dir)
+File: dockCupHw.info,  Node: Top,  Next: Introduction,  Up: (dir)
 
 ERC
 ***
@@ -75,7 +75,7 @@ Advanced Usage
 
 
 
-File: doc5q00sB.info,  Node: Introduction,  Next: Getting Started,  Prev: Top,  Up: Top
+File: dockCupHw.info,  Node: Introduction,  Next: Getting Started,  Prev: Top,  Up: Top
 
 1 Introduction
 **************
@@ -121,7 +121,7 @@ network, even if they are not in the same channels as you.
    • Track channel activity in the mode-line
 
 
-File: doc5q00sB.info,  Node: Getting Started,  Next: Keystroke Summary,  Prev: Introduction,  Up: Top
+File: dockCupHw.info,  Node: Getting Started,  Next: Keystroke Summary,  Prev: Introduction,  Up: Top
 
 2 Getting Started
 *****************
@@ -147,7 +147,7 @@ you want, do ‘M-x customize-variable <RET> erc-modules <RET>’.
 * Special Features::            Differences from standalone IRC clients
 
 
-File: doc5q00sB.info,  Node: Sample Session,  Next: Special Features,  Up: Getting Started
+File: dockCupHw.info,  Node: Sample Session,  Next: Special Features,  Up: Getting Started
 
 2.1 Sample Session
 ==================
@@ -234,7 +234,7 @@ ERC.
      and Reporting Bugs::.
 
 
-File: doc5q00sB.info,  Node: Special Features,  Prev: Sample Session,  Up: Getting Started
+File: dockCupHw.info,  Node: Special Features,  Prev: Sample Session,  Up: Getting Started
 
 2.2 Special Features
 ====================
@@ -303,7 +303,7 @@ ERC has some features that distinguish it from some IRC clients.
      switch to an ERC buffer and run the ‘/RECONNECT’ command.
 
 
-File: doc5q00sB.info,  Node: Keystroke Summary,  Next: Modules,  Prev: Getting Started,  Up: Top
+File: dockCupHw.info,  Node: Keystroke Summary,  Next: Modules,  Prev: Getting Started,  Up: Top
 
 3 Keys Used in ERC
 ******************
@@ -382,7 +382,7 @@ This is a summary of keystrokes available in every ERC buffer.
      Kill current input line using ‘erc-bol’ followed by ‘kill-line’.
 
 
-File: doc5q00sB.info,  Node: Modules,  Next: Advanced Usage,  Prev: Keystroke Summary,  Up: Top
+File: dockCupHw.info,  Node: Modules,  Next: Advanced Usage,  Prev: Keystroke Summary,  Up: Top
 
 4 Modules
 *********
@@ -634,7 +634,7 @@ incorrectly, with built-in modules moved from the predefined checklist
 to the user-provided free-form area.
 
 
-File: doc5q00sB.info,  Node: Advanced Usage,  Next: Getting Help and Reporting Bugs,  Prev: Modules,  Up: Top
+File: dockCupHw.info,  Node: Advanced Usage,  Next: Getting Help and Reporting Bugs,  Prev: Modules,  Up: Top
 
 5 Advanced Usage
 ****************
@@ -658,7 +658,7 @@ Integrations
 
 
 
-File: doc5q00sB.info,  Node: Connecting,  Next: SASL,  Up: Advanced Usage
+File: dockCupHw.info,  Node: Connecting,  Next: SASL,  Up: Advanced Usage
 
 5.1 Connecting to an IRC Server
 ===============================
@@ -904,7 +904,7 @@ human-friendly way suitable for UI components.
 make the most sense, but any reasonably printable object is acceptable.
 
 
-File: doc5q00sB.info,  Node: SASL,  Next: Sample Configuration,  Prev: Connecting,  Up: Advanced Usage
+File: dockCupHw.info,  Node: SASL,  Next: Sample Configuration,  Prev: Connecting,  Up: Advanced Usage
 
 5.2 Authenticating via SASL
 ===========================
@@ -1104,7 +1104,7 @@ generally not recommended.  Whatever the case, you’ll probably want to
 temporarily disable ‘erc-server-auto-reconnect’ while experimenting.
 
 
-File: doc5q00sB.info,  Node: Sample Configuration,  Next: Integrations,  Prev: SASL,  Up: Advanced Usage
+File: dockCupHw.info,  Node: Sample Configuration,  Next: Integrations,  Prev: SASL,  Up: Advanced Usage
 
 5.3 Sample Configuration
 ========================
@@ -1138,14 +1138,11 @@ settings (*note Sample configuration via Customize::).
      ;;; My ERC configuration -*- lexical-binding: t -*-
 
      (use-package erc
-       :config
-       ;; Prefer SASL to NickServ, colorize nicknames, and show side panels
-       ;; with joined channels and members
-       (setopt erc-modules
-               (seq-union '(sasl nicks bufbar nickbar scrolltobottom)
-                          erc-modules))
-
        :custom
+       ;; Prefer SASL to NickServ, colorize nicknames, and show side panels
+       ;; with joined channels and members.
+       (erc-modules (append '(sasl nicks bufbar nickbar scrolltobottom)
+                            erc-modules))
        ;; Protect me from accidentally sending excess lines.
        (erc-inhibit-multiline-input t)
        (erc-send-whitespace-lines t)
@@ -1185,6 +1182,13 @@ settings (*note Sample configuration via Customize::).
        (erc-fill-static-center 18)
 
        :bind (:map erc-fill-wrap-mode-map ("C-c =" . #'erc-fill-wrap-nudge)))
+
+     (use-package erc-match
+       ;; Use the same face for my own nick wherever it appears.
+       :custom-face
+       (erc-current-nick-face ((t ( :weight unspecified
+                                    :foreground unspecified
+                                    :inherit erc-my-nick-face)))))
 
      (use-package erc-track
        ;; Prevent JOINs and PARTs from lighting up the mode-line.
@@ -1347,6 +1351,17 @@ function ‘erc-fill-wrap-nudge’ in the minor-mode keymap
 ‘erc-fill-wrap-mode-hook’, and it’s not a member of any customization
 group).
 
+   Try customizing another face, this time with inheritance.  ERC’s
+match module highlights your nick whenever someone mentions you in
+conversation.  However, some users don’t like that this face differs
+from the one in your own messages.  Let’s change that.  Type ‘M-x
+customize-group <RET> erc-faces <RET>’.  Either search for the word
+“Current” or type ‘M-x customize-face <RET> erc-current-nick-face
+<RET>’.  Untick ‘Weight’ and ‘Foreground’, then click the “Show All
+Attributes” button below them.  Navigate down to the ‘Inherit’ box, tick
+it, hit ‘[INS]’, and type ‘erc-my-nick-face’ in the ‘Face’ field.  Hit
+‘C-x C-s’ to save.
+
    ERC users tend to be picky about the mode line.  If you find that
 you’d rather not see changes when people join and leave channels,
 customize the option ‘erc-track-faces-priority-list’.  When visiting its
@@ -1376,7 +1391,7 @@ buffers to tell ERC whether to show activity from these buffers in the
 mode line.
 
 
-File: doc5q00sB.info,  Node: Integrations,  Next: Options,  Prev: Sample Configuration,  Up: Advanced Usage
+File: dockCupHw.info,  Node: Integrations,  Next: Options,  Prev: Sample Configuration,  Up: Advanced Usage
 
 5.4 Integrations
 ================
@@ -1461,7 +1476,7 @@ just set those options and variables globally and bind
 ‘erc-server-connect-function’ to ‘erc-open-socks-tls-stream’ instead.
 
 
-File: doc5q00sB.info,  Node: auth-source,  Next: display-buffer,  Up: Integrations
+File: dockCupHw.info,  Node: auth-source,  Next: display-buffer,  Up: Integrations
 
 5.4.3 auth-source
 -----------------
@@ -1623,7 +1638,7 @@ first, try logging out.  And when in doubt, try using the Emacs command
 ‘GnuPG/stored-by’ entry with a value of ‘GnuPG Pinentry’ or similar.
 
 
-File: doc5q00sB.info,  Node: display-buffer,  Prev: auth-source,  Up: Integrations
+File: dockCupHw.info,  Node: display-buffer,  Prev: auth-source,  Up: Integrations
 
 5.4.4 display-buffer
 --------------------
@@ -1775,7 +1790,7 @@ Module-based (minor-mode) keys:
              − channel name as a string, e.g., ‘"#chan"’
 
 
-File: doc5q00sB.info,  Node: Options,  Prev: Integrations,  Up: Advanced Usage
+File: dockCupHw.info,  Node: Options,  Prev: Integrations,  Up: Advanced Usage
 
 5.5 Options
 ===========
@@ -1809,7 +1824,7 @@ out all the available options for ERC is to do ‘M-x customize-group
      considered a lurker.
 
 
-File: doc5q00sB.info,  Node: Getting Help and Reporting Bugs,  Next: History,  Prev: Advanced Usage,  Up: Top
+File: dockCupHw.info,  Node: Getting Help and Reporting Bugs,  Next: History,  Prev: Advanced Usage,  Up: Top
 
 6 Getting Help and Reporting Bugs
 *********************************
@@ -1866,7 +1881,7 @@ or if you have bugs to report, there are several places you can go.
    • To report a bug in ERC, use ‘M-x erc-bug’.
 
 
-File: doc5q00sB.info,  Node: History,  Next: GNU Free Documentation License,  Prev: Getting Help and Reporting Bugs,  Up: Top
+File: dockCupHw.info,  Node: History,  Next: GNU Free Documentation License,  Prev: Getting Help and Reporting Bugs,  Up: Top
 
 7 History
 *********
@@ -1948,7 +1963,7 @@ June 2021.  GNU and FSF’s announcements about this are at
 <https://lists.gnu.org/archive/html/info-gnu-emacs/2021-06/msg00000.html>.
 
 
-File: doc5q00sB.info,  Node: GNU Free Documentation License,  Next: Concept Index,  Prev: History,  Up: Top
+File: dockCupHw.info,  Node: GNU Free Documentation License,  Next: Concept Index,  Prev: History,  Up: Top
 
 Appendix A GNU Free Documentation License
 *****************************************
@@ -2430,7 +2445,7 @@ software license, such as the GNU General Public License, to permit
 their use in free software.
 
 
-File: doc5q00sB.info,  Node: Concept Index,  Prev: GNU Free Documentation License,  Up: Top
+File: dockCupHw.info,  Node: Concept Index,  Prev: GNU Free Documentation License,  Up: Top
 
 Index
 *****
@@ -2446,7 +2461,7 @@ Index
 * configuration, sample:                 Sample Configuration.
                                                               (line   6)
 * configuration, via customize:          Sample Configuration.
-                                                              (line 124)
+                                                              (line 128)
 * connecting:                            Connecting.          (line   6)
 * display-buffer:                        display-buffer.      (line   6)
 * erc:                                   Connecting.          (line  10)
@@ -2541,22 +2556,22 @@ Ref: Network Identifier33428
 Node: SASL34514
 Ref: SASL auth-source function39018
 Node: Sample Configuration44089
-Ref: Sample configuration via Customize49146
-Node: Integrations57773
-Ref: URL58072
-Ref: SOCKS58972
-Node: auth-source61440
-Ref: auth-source Server Password62085
-Ref: auth-source functions66600
-Ref: auth-source Troubleshooting67971
-Node: display-buffer69370
-Node: Options75817
-Node: Getting Help and Reporting Bugs76946
-Ref: Upgrading77960
-Node: History79872
-Ref: Official IRC channels82041
-Node: GNU Free Documentation License82716
-Node: Concept Index108074
+Ref: Sample configuration via Customize49405
+Node: Integrations58718
+Ref: URL59017
+Ref: SOCKS59917
+Node: auth-source62385
+Ref: auth-source Server Password63030
+Ref: auth-source functions67545
+Ref: auth-source Troubleshooting68916
+Node: display-buffer70315
+Node: Options76762
+Node: Getting Help and Reporting Bugs77891
+Ref: Upgrading78905
+Node: History80817
+Ref: Official IRC channels82986
+Node: GNU Free Documentation License83661
+Node: Concept Index109019
 
 End Tag Table
 
