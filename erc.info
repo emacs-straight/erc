@@ -1,4 +1,4 @@
-This is dockCupHw.info, produced by makeinfo version 6.8 from erc.texi.
+This is docBn6oLm.info, produced by makeinfo version 6.8 from erc.texi.
 
 This manual is for ERC 5.6.1 from GNU ELPA.
 
@@ -23,7 +23,7 @@ START-INFO-DIR-ENTRY
 END-INFO-DIR-ENTRY
 
 
-File: dockCupHw.info,  Node: Top,  Next: Introduction,  Up: (dir)
+File: docBn6oLm.info,  Node: Top,  Next: Introduction,  Up: (dir)
 
 ERC
 ***
@@ -75,7 +75,7 @@ Advanced Usage
 
 
 
-File: dockCupHw.info,  Node: Introduction,  Next: Getting Started,  Prev: Top,  Up: Top
+File: docBn6oLm.info,  Node: Introduction,  Next: Getting Started,  Prev: Top,  Up: Top
 
 1 Introduction
 **************
@@ -121,7 +121,7 @@ network, even if they are not in the same channels as you.
    • Track channel activity in the mode-line
 
 
-File: dockCupHw.info,  Node: Getting Started,  Next: Keystroke Summary,  Prev: Introduction,  Up: Top
+File: docBn6oLm.info,  Node: Getting Started,  Next: Keystroke Summary,  Prev: Introduction,  Up: Top
 
 2 Getting Started
 *****************
@@ -147,7 +147,7 @@ you want, do ‘M-x customize-variable <RET> erc-modules <RET>’.
 * Special Features::            Differences from standalone IRC clients
 
 
-File: dockCupHw.info,  Node: Sample Session,  Next: Special Features,  Up: Getting Started
+File: docBn6oLm.info,  Node: Sample Session,  Next: Special Features,  Up: Getting Started
 
 2.1 Sample Session
 ==================
@@ -234,7 +234,7 @@ ERC.
      and Reporting Bugs::.
 
 
-File: dockCupHw.info,  Node: Special Features,  Prev: Sample Session,  Up: Getting Started
+File: docBn6oLm.info,  Node: Special Features,  Prev: Sample Session,  Up: Getting Started
 
 2.2 Special Features
 ====================
@@ -303,7 +303,7 @@ ERC has some features that distinguish it from some IRC clients.
      switch to an ERC buffer and run the ‘/RECONNECT’ command.
 
 
-File: dockCupHw.info,  Node: Keystroke Summary,  Next: Modules,  Prev: Getting Started,  Up: Top
+File: docBn6oLm.info,  Node: Keystroke Summary,  Next: Modules,  Prev: Getting Started,  Up: Top
 
 3 Keys Used in ERC
 ******************
@@ -382,7 +382,7 @@ This is a summary of keystrokes available in every ERC buffer.
      Kill current input line using ‘erc-bol’ followed by ‘kill-line’.
 
 
-File: dockCupHw.info,  Node: Modules,  Next: Advanced Usage,  Prev: Keystroke Summary,  Up: Top
+File: docBn6oLm.info,  Node: Modules,  Next: Advanced Usage,  Prev: Keystroke Summary,  Up: Top
 
 4 Modules
 *********
@@ -390,10 +390,11 @@ File: dockCupHw.info,  Node: Modules,  Next: Advanced Usage,  Prev: Keystroke Su
 One way to add functionality to ERC is to customize which of its many
 modules are loaded.
 
-   There is a spiffy customize interface, which may be reached by typing
-‘M-x customize-option <RET> erc-modules <RET>’.  When removing a module
-outside of Customize, you may wish to ensure it’s disabled by invoking
-its associated minor-mode toggle with a nonpositive prefix argument, for
+   You can do this by typing ‘C-h v erc-modules <RET>’ and clicking
+‘customize’ near the bottom of the resulting help buffer, where it says
+“You can _customize_ this variable.” When removing a module outside of
+Customize, you may wish to ensure it’s disabled by invoking its
+associated minor-mode toggle with a nonpositive prefix argument, for
 example, ‘C-u - M-x erc-spelling-mode <RET>’.  Additionally, if you plan
 on loading third-party modules that perform atypical setup on
 activation, you may need to arrange for calling ‘erc-update-modules’ in
@@ -634,7 +635,7 @@ incorrectly, with built-in modules moved from the predefined checklist
 to the user-provided free-form area.
 
 
-File: dockCupHw.info,  Node: Advanced Usage,  Next: Getting Help and Reporting Bugs,  Prev: Modules,  Up: Top
+File: docBn6oLm.info,  Node: Advanced Usage,  Next: Getting Help and Reporting Bugs,  Prev: Modules,  Up: Top
 
 5 Advanced Usage
 ****************
@@ -658,7 +659,7 @@ Integrations
 
 
 
-File: dockCupHw.info,  Node: Connecting,  Next: SASL,  Up: Advanced Usage
+File: docBn6oLm.info,  Node: Connecting,  Next: SASL,  Up: Advanced Usage
 
 5.1 Connecting to an IRC Server
 ===============================
@@ -904,7 +905,7 @@ human-friendly way suitable for UI components.
 make the most sense, but any reasonably printable object is acceptable.
 
 
-File: dockCupHw.info,  Node: SASL,  Next: Sample Configuration,  Prev: Connecting,  Up: Advanced Usage
+File: docBn6oLm.info,  Node: SASL,  Next: Sample Configuration,  Prev: Connecting,  Up: Advanced Usage
 
 5.2 Authenticating via SASL
 ===========================
@@ -1104,7 +1105,7 @@ generally not recommended.  Whatever the case, you’ll probably want to
 temporarily disable ‘erc-server-auto-reconnect’ while experimenting.
 
 
-File: dockCupHw.info,  Node: Sample Configuration,  Next: Integrations,  Prev: SASL,  Up: Advanced Usage
+File: docBn6oLm.info,  Node: Sample Configuration,  Next: Integrations,  Prev: SASL,  Up: Advanced Usage
 
 5.3 Sample Configuration
 ========================
@@ -1138,11 +1139,14 @@ settings (*note Sample configuration via Customize::).
      ;;; My ERC configuration -*- lexical-binding: t -*-
 
      (use-package erc
-       :custom
+       :config
        ;; Prefer SASL to NickServ, colorize nicknames, and show side panels
-       ;; with joined channels and members.
-       (erc-modules (append '(sasl nicks bufbar nickbar scrolltobottom)
-                            erc-modules))
+       ;; with joined channels and members
+       (setopt erc-modules
+               (seq-union '(sasl nicks bufbar nickbar scrolltobottom)
+                          erc-modules))
+
+       :custom
        ;; Protect me from accidentally sending excess lines.
        (erc-inhibit-multiline-input t)
        (erc-send-whitespace-lines t)
@@ -1391,7 +1395,7 @@ buffers to tell ERC whether to show activity from these buffers in the
 mode line.
 
 
-File: dockCupHw.info,  Node: Integrations,  Next: Options,  Prev: Sample Configuration,  Up: Advanced Usage
+File: docBn6oLm.info,  Node: Integrations,  Next: Options,  Prev: Sample Configuration,  Up: Advanced Usage
 
 5.4 Integrations
 ================
@@ -1476,7 +1480,7 @@ just set those options and variables globally and bind
 ‘erc-server-connect-function’ to ‘erc-open-socks-tls-stream’ instead.
 
 
-File: dockCupHw.info,  Node: auth-source,  Next: display-buffer,  Up: Integrations
+File: docBn6oLm.info,  Node: auth-source,  Next: display-buffer,  Up: Integrations
 
 5.4.3 auth-source
 -----------------
@@ -1638,7 +1642,7 @@ first, try logging out.  And when in doubt, try using the Emacs command
 ‘GnuPG/stored-by’ entry with a value of ‘GnuPG Pinentry’ or similar.
 
 
-File: dockCupHw.info,  Node: display-buffer,  Prev: auth-source,  Up: Integrations
+File: docBn6oLm.info,  Node: display-buffer,  Prev: auth-source,  Up: Integrations
 
 5.4.4 display-buffer
 --------------------
@@ -1790,7 +1794,7 @@ Module-based (minor-mode) keys:
              − channel name as a string, e.g., ‘"#chan"’
 
 
-File: dockCupHw.info,  Node: Options,  Prev: Integrations,  Up: Advanced Usage
+File: docBn6oLm.info,  Node: Options,  Prev: Integrations,  Up: Advanced Usage
 
 5.5 Options
 ===========
@@ -1824,7 +1828,7 @@ out all the available options for ERC is to do ‘M-x customize-group
      considered a lurker.
 
 
-File: dockCupHw.info,  Node: Getting Help and Reporting Bugs,  Next: History,  Prev: Advanced Usage,  Up: Top
+File: docBn6oLm.info,  Node: Getting Help and Reporting Bugs,  Next: History,  Prev: Advanced Usage,  Up: Top
 
 6 Getting Help and Reporting Bugs
 *********************************
@@ -1881,7 +1885,7 @@ or if you have bugs to report, there are several places you can go.
    • To report a bug in ERC, use ‘M-x erc-bug’.
 
 
-File: dockCupHw.info,  Node: History,  Next: GNU Free Documentation License,  Prev: Getting Help and Reporting Bugs,  Up: Top
+File: docBn6oLm.info,  Node: History,  Next: GNU Free Documentation License,  Prev: Getting Help and Reporting Bugs,  Up: Top
 
 7 History
 *********
@@ -1963,7 +1967,7 @@ June 2021.  GNU and FSF’s announcements about this are at
 <https://lists.gnu.org/archive/html/info-gnu-emacs/2021-06/msg00000.html>.
 
 
-File: dockCupHw.info,  Node: GNU Free Documentation License,  Next: Concept Index,  Prev: History,  Up: Top
+File: docBn6oLm.info,  Node: GNU Free Documentation License,  Next: Concept Index,  Prev: History,  Up: Top
 
 Appendix A GNU Free Documentation License
 *****************************************
@@ -2445,7 +2449,7 @@ software license, such as the GNU General Public License, to permit
 their use in free software.
 
 
-File: dockCupHw.info,  Node: Concept Index,  Prev: GNU Free Documentation License,  Up: Top
+File: docBn6oLm.info,  Node: Concept Index,  Prev: GNU Free Documentation License,  Up: Top
 
 Index
 *****
@@ -2455,13 +2459,13 @@ Index
 
 * advanced topics:                       Advanced Usage.      (line   6)
 * auth-source:                           auth-source.         (line   6)
-* auxiliary modules:                     Modules.             (line 136)
+* auxiliary modules:                     Modules.             (line 137)
 * bugs, reporting:                       Getting Help and Reporting Bugs.
                                                               (line   6)
 * configuration, sample:                 Sample Configuration.
                                                               (line   6)
 * configuration, via customize:          Sample Configuration.
-                                                              (line 128)
+                                                              (line 131)
 * connecting:                            Connecting.          (line   6)
 * display-buffer:                        display-buffer.      (line   6)
 * erc:                                   Connecting.          (line  10)
@@ -2479,53 +2483,53 @@ Index
 * history, of ERC:                       History.             (line   6)
 * integrations:                          Integrations.        (line   6)
 * keystrokes:                            Keystroke Summary.   (line   6)
-* local modules:                         Modules.             (line 164)
-* module loading:                        Modules.             (line 207)
+* local modules:                         Modules.             (line 165)
+* module loading:                        Modules.             (line 208)
 * modules:                               Modules.             (line   6)
-* modules, autoaway:                     Modules.             (line  23)
-* modules, autojoin:                     Modules.             (line  26)
-* modules, bufbar:                       Modules.             (line  29)
-* modules, button:                       Modules.             (line  33)
-* modules, capab-identify:               Modules.             (line  36)
-* modules, command-indicator:            Modules.             (line  40)
-* modules, completion:                   Modules.             (line  44)
-* modules, fill:                         Modules.             (line  47)
-* modules, fill-wrap:                    Modules.             (line 141)
-* modules, identd:                       Modules.             (line  50)
-* modules, irccontrols:                  Modules.             (line  53)
-* modules, keep-place:                   Modules.             (line  56)
-* modules, keep-place-indicator:         Modules.             (line 144)
-* modules, log:                          Modules.             (line  59)
-* modules, match:                        Modules.             (line  62)
-* modules, menu:                         Modules.             (line  65)
-* modules, netsplit:                     Modules.             (line  68)
-* modules, nickbar:                      Modules.             (line  74)
-* modules, nicks:                        Modules.             (line  71)
-* modules, noncommands:                  Modules.             (line  78)
-* modules, notifications:                Modules.             (line  84)
-* modules, notify:                       Modules.             (line  81)
-* modules, page:                         Modules.             (line  88)
-* modules, pcomplete:                    Modules.             (line  44)
-* modules, querypoll:                    Modules.             (line  91)
-* modules, readonly:                     Modules.             (line  94)
-* modules, replace:                      Modules.             (line  97)
-* modules, ring:                         Modules.             (line 100)
-* modules, sasl:                         Modules.             (line 103)
-* modules, scrolltobottom:               Modules.             (line 106)
-* modules, services:                     Modules.             (line 109)
-* modules, services-regain:              Modules.             (line 148)
-* modules, smiley:                       Modules.             (line 112)
-* modules, sound:                        Modules.             (line 115)
-* modules, spelling:                     Modules.             (line 118)
-* modules, stamp:                        Modules.             (line 121)
-* modules, track:                        Modules.             (line 124)
-* modules, truncate:                     Modules.             (line 127)
-* modules, unmorse:                      Modules.             (line 130)
+* modules, autoaway:                     Modules.             (line  24)
+* modules, autojoin:                     Modules.             (line  27)
+* modules, bufbar:                       Modules.             (line  30)
+* modules, button:                       Modules.             (line  34)
+* modules, capab-identify:               Modules.             (line  37)
+* modules, command-indicator:            Modules.             (line  41)
+* modules, completion:                   Modules.             (line  45)
+* modules, fill:                         Modules.             (line  48)
+* modules, fill-wrap:                    Modules.             (line 142)
+* modules, identd:                       Modules.             (line  51)
+* modules, irccontrols:                  Modules.             (line  54)
+* modules, keep-place:                   Modules.             (line  57)
+* modules, keep-place-indicator:         Modules.             (line 145)
+* modules, log:                          Modules.             (line  60)
+* modules, match:                        Modules.             (line  63)
+* modules, menu:                         Modules.             (line  66)
+* modules, netsplit:                     Modules.             (line  69)
+* modules, nickbar:                      Modules.             (line  75)
+* modules, nicks:                        Modules.             (line  72)
+* modules, noncommands:                  Modules.             (line  79)
+* modules, notifications:                Modules.             (line  85)
+* modules, notify:                       Modules.             (line  82)
+* modules, page:                         Modules.             (line  89)
+* modules, pcomplete:                    Modules.             (line  45)
+* modules, querypoll:                    Modules.             (line  92)
+* modules, readonly:                     Modules.             (line  95)
+* modules, replace:                      Modules.             (line  98)
+* modules, ring:                         Modules.             (line 101)
+* modules, sasl:                         Modules.             (line 104)
+* modules, scrolltobottom:               Modules.             (line 107)
+* modules, services:                     Modules.             (line 110)
+* modules, services-regain:              Modules.             (line 149)
+* modules, smiley:                       Modules.             (line 113)
+* modules, sound:                        Modules.             (line 116)
+* modules, spelling:                     Modules.             (line 119)
+* modules, stamp:                        Modules.             (line 122)
+* modules, track:                        Modules.             (line 125)
+* modules, truncate:                     Modules.             (line 128)
+* modules, unmorse:                      Modules.             (line 131)
 * official IRC channels:                 History.             (line  72)
 * options:                               Options.             (line   6)
 * password, server:                      Connecting.          (line 176)
 * query buffers:                         Special Features.    (line  13)
-* required modules:                      Modules.             (line 155)
+* required modules:                      Modules.             (line 156)
 * SASL:                                  SASL.                (line   6)
 * settings:                              Getting Started.     (line   6)
 * SOCKS:                                 Integrations.        (line  34)
@@ -2542,36 +2546,36 @@ Node: Sample Session6029
 Node: Special Features10243
 Node: Keystroke Summary12479
 Node: Modules15140
-Ref: Auxiliary Modules18479
-Ref: Required Modules19146
-Ref: Local Modules19484
-Ref: Module Loading21804
-Node: Advanced Usage24406
-Node: Connecting25202
-Ref: client-certificate26880
-Ref: username parameter30786
-Ref: password parameter31381
-Ref: server password31381
-Ref: Network Identifier33428
-Node: SASL34514
-Ref: SASL auth-source function39018
-Node: Sample Configuration44089
-Ref: Sample configuration via Customize49405
-Node: Integrations58718
-Ref: URL59017
-Ref: SOCKS59917
-Node: auth-source62385
-Ref: auth-source Server Password63030
-Ref: auth-source functions67545
-Ref: auth-source Troubleshooting68916
-Node: display-buffer70315
-Node: Options76762
-Node: Getting Help and Reporting Bugs77891
-Ref: Upgrading78905
-Node: History80817
-Ref: Official IRC channels82986
-Node: GNU Free Documentation License83661
-Node: Concept Index109019
+Ref: Auxiliary Modules18542
+Ref: Required Modules19209
+Ref: Local Modules19547
+Ref: Module Loading21867
+Node: Advanced Usage24469
+Node: Connecting25265
+Ref: client-certificate26943
+Ref: username parameter30849
+Ref: password parameter31444
+Ref: server password31444
+Ref: Network Identifier33491
+Node: SASL34577
+Ref: SASL auth-source function39081
+Node: Sample Configuration44152
+Ref: Sample configuration via Customize49506
+Node: Integrations58819
+Ref: URL59118
+Ref: SOCKS60018
+Node: auth-source62486
+Ref: auth-source Server Password63131
+Ref: auth-source functions67646
+Ref: auth-source Troubleshooting69017
+Node: display-buffer70416
+Node: Options76863
+Node: Getting Help and Reporting Bugs77992
+Ref: Upgrading79006
+Node: History80918
+Ref: Official IRC channels83087
+Node: GNU Free Documentation License83762
+Node: Concept Index109120
 
 End Tag Table
 
