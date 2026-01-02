@@ -1,9 +1,9 @@
-This is docliEIxc.info, produced by makeinfo version 7.1.1 from
+This is dockLIpRh.info, produced by makeinfo version 7.1.1 from
 erc.texi.
 
 This manual is for ERC 5.6.2 from GNU ELPA.
 
-   Copyright © 2005-2025 Free Software Foundation, Inc.
+   Copyright © 2005-2026 Free Software Foundation, Inc.
 
      Permission is granted to copy, distribute and/or modify this
      document under the terms of the GNU Free Documentation License,
@@ -24,14 +24,14 @@ START-INFO-DIR-ENTRY
 END-INFO-DIR-ENTRY
 
 
-File: docliEIxc.info,  Node: Top,  Next: Introduction,  Up: (dir)
+File: dockLIpRh.info,  Node: Top,  Next: Introduction,  Up: (dir)
 
 ERC
 ***
 
 This manual is for ERC 5.6.2 from GNU ELPA.
 
-   Copyright © 2005-2025 Free Software Foundation, Inc.
+   Copyright © 2005-2026 Free Software Foundation, Inc.
 
      Permission is granted to copy, distribute and/or modify this
      document under the terms of the GNU Free Documentation License,
@@ -76,7 +76,7 @@ Advanced Usage
 
 
 
-File: docliEIxc.info,  Node: Introduction,  Next: Getting Started,  Prev: Top,  Up: Top
+File: dockLIpRh.info,  Node: Introduction,  Next: Getting Started,  Prev: Top,  Up: Top
 
 1 Introduction
 **************
@@ -122,7 +122,7 @@ network, even if they are not in the same channels as you.
    • Track channel activity in the mode-line
 
 
-File: docliEIxc.info,  Node: Getting Started,  Next: Keystroke Summary,  Prev: Introduction,  Up: Top
+File: dockLIpRh.info,  Node: Getting Started,  Next: Keystroke Summary,  Prev: Introduction,  Up: Top
 
 2 Getting Started
 *****************
@@ -148,7 +148,7 @@ you want, do ‘M-x customize-variable <RET> erc-modules <RET>’.
 * Special Features::            Differences from standalone IRC clients
 
 
-File: docliEIxc.info,  Node: Sample Session,  Next: Special Features,  Up: Getting Started
+File: dockLIpRh.info,  Node: Sample Session,  Next: Special Features,  Up: Getting Started
 
 2.1 Sample Session
 ==================
@@ -235,7 +235,7 @@ ERC.
      and Reporting Bugs::.
 
 
-File: docliEIxc.info,  Node: Special Features,  Prev: Sample Session,  Up: Getting Started
+File: dockLIpRh.info,  Node: Special Features,  Prev: Sample Session,  Up: Getting Started
 
 2.2 Special Features
 ====================
@@ -304,7 +304,7 @@ ERC has some features that distinguish it from some IRC clients.
      switch to an ERC buffer and run the ‘/RECONNECT’ command.
 
 
-File: docliEIxc.info,  Node: Keystroke Summary,  Next: Modules,  Prev: Getting Started,  Up: Top
+File: dockLIpRh.info,  Node: Keystroke Summary,  Next: Modules,  Prev: Getting Started,  Up: Top
 
 3 Keys Used in ERC
 ******************
@@ -383,7 +383,7 @@ This is a summary of keystrokes available in every ERC buffer.
      Kill current input line using ‘erc-bol’ followed by ‘kill-line’.
 
 
-File: docliEIxc.info,  Node: Modules,  Next: Advanced Usage,  Prev: Keystroke Summary,  Up: Top
+File: dockLIpRh.info,  Node: Modules,  Next: Advanced Usage,  Prev: Keystroke Summary,  Up: Top
 
 4 Modules
 *********
@@ -655,7 +655,7 @@ incorrectly, with built-in modules moved from the predefined checklist
 to the user-provided free-form area.
 
 
-File: docliEIxc.info,  Node: Advanced Usage,  Next: Getting Help and Reporting Bugs,  Prev: Modules,  Up: Top
+File: dockLIpRh.info,  Node: Advanced Usage,  Next: Getting Help and Reporting Bugs,  Prev: Modules,  Up: Top
 
 5 Advanced Usage
 ****************
@@ -679,7 +679,7 @@ Integrations
 
 
 
-File: docliEIxc.info,  Node: Connecting,  Next: SASL,  Up: Advanced Usage
+File: dockLIpRh.info,  Node: Connecting,  Next: SASL,  Up: Advanced Usage
 
 5.1 Connecting to an IRC Server
 ===============================
@@ -933,7 +933,7 @@ human-friendly way suitable for UI components.
 make the most sense, but any reasonably printable object is acceptable.
 
 
-File: docliEIxc.info,  Node: SASL,  Next: Sample Configuration,  Prev: Connecting,  Up: Advanced Usage
+File: dockLIpRh.info,  Node: SASL,  Next: Sample Configuration,  Prev: Connecting,  Up: Advanced Usage
 
 5.2 Authenticating via SASL
 ===========================
@@ -1133,7 +1133,7 @@ generally not recommended.  Whatever the case, you'll probably want to
 temporarily disable ‘erc-server-auto-reconnect’ while experimenting.
 
 
-File: docliEIxc.info,  Node: Sample Configuration,  Next: Integrations,  Prev: SASL,  Up: Advanced Usage
+File: dockLIpRh.info,  Node: Sample Configuration,  Next: Integrations,  Prev: SASL,  Up: Advanced Usage
 
 5.3 Sample Configuration
 ========================
@@ -1413,7 +1413,7 @@ buffers to tell ERC whether to show activity from these buffers in the
 mode line.
 
 
-File: docliEIxc.info,  Node: Integrations,  Next: Options,  Prev: Sample Configuration,  Up: Advanced Usage
+File: dockLIpRh.info,  Node: Integrations,  Next: Options,  Prev: Sample Configuration,  Up: Advanced Usage
 
 5.4 Integrations
 ================
@@ -1510,7 +1510,7 @@ just set those options and variables globally and bind
      connectivity.
 
 
-File: docliEIxc.info,  Node: auth-source,  Next: display-buffer,  Up: Integrations
+File: dockLIpRh.info,  Node: auth-source,  Next: display-buffer,  Up: Integrations
 
 5.4.3 auth-source
 -----------------
@@ -1672,7 +1672,7 @@ first, try logging out.  And when in doubt, try using the Emacs command
 ‘GnuPG/stored-by’ entry with a value of ‘GnuPG Pinentry’ or similar.
 
 
-File: docliEIxc.info,  Node: display-buffer,  Prev: auth-source,  Up: Integrations
+File: dockLIpRh.info,  Node: display-buffer,  Prev: auth-source,  Up: Integrations
 
 5.4.4 display-buffer
 --------------------
@@ -1824,7 +1824,7 @@ Module-based (minor-mode) keys:
              − channel name as a string, e.g., ‘"#chan"’
 
 
-File: docliEIxc.info,  Node: Options,  Prev: Integrations,  Up: Advanced Usage
+File: dockLIpRh.info,  Node: Options,  Prev: Integrations,  Up: Advanced Usage
 
 5.5 Options
 ===========
@@ -1858,7 +1858,7 @@ out all the available options for ERC is to do ‘M-x customize-group
      considered a lurker.
 
 
-File: docliEIxc.info,  Node: Getting Help and Reporting Bugs,  Next: History,  Prev: Advanced Usage,  Up: Top
+File: dockLIpRh.info,  Node: Getting Help and Reporting Bugs,  Next: History,  Prev: Advanced Usage,  Up: Top
 
 6 Getting Help and Reporting Bugs
 *********************************
@@ -1915,7 +1915,7 @@ or if you have bugs to report, there are several places you can go.
    • To report a bug in ERC, use ‘M-x erc-bug’.
 
 
-File: docliEIxc.info,  Node: History,  Next: GNU Free Documentation License,  Prev: Getting Help and Reporting Bugs,  Up: Top
+File: dockLIpRh.info,  Node: History,  Next: GNU Free Documentation License,  Prev: Getting Help and Reporting Bugs,  Up: Top
 
 7 History
 *********
@@ -1997,7 +1997,7 @@ June 2021.  GNU and FSF's announcements about this are at
 <https://lists.gnu.org/archive/html/info-gnu-emacs/2021-06/msg00000.html>.
 
 
-File: docliEIxc.info,  Node: GNU Free Documentation License,  Next: Concept Index,  Prev: History,  Up: Top
+File: dockLIpRh.info,  Node: GNU Free Documentation License,  Next: Concept Index,  Prev: History,  Up: Top
 
 Appendix A GNU Free Documentation License
 *****************************************
@@ -2479,7 +2479,7 @@ software license, such as the GNU General Public License, to permit
 their use in free software.
 
 
-File: docliEIxc.info,  Node: Concept Index,  Prev: GNU Free Documentation License,  Up: Top
+File: dockLIpRh.info,  Node: Concept Index,  Prev: GNU Free Documentation License,  Up: Top
 
 Index
 *****
