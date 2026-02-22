@@ -1,5 +1,4 @@
-This is doc0ESekl.info, produced by makeinfo version 7.1.1 from
-erc.texi.
+This is erc.info, produced by makeinfo version 7.2 from erc.texi.
 
 This manual is for ERC 5.6.2 from GNU ELPA.
 
@@ -24,7 +23,7 @@ START-INFO-DIR-ENTRY
 END-INFO-DIR-ENTRY
 
 
-File: doc0ESekl.info,  Node: Top,  Next: Introduction,  Up: (dir)
+File: erc.info,  Node: Top,  Next: Introduction,  Up: (dir)
 
 ERC
 ***
@@ -74,9 +73,8 @@ Advanced Usage
 * Integrations::                Integrations available for ERC.
 * Options::                     Options that are available for ERC.
 
-
 
-File: doc0ESekl.info,  Node: Introduction,  Next: Getting Started,  Prev: Top,  Up: Top
+File: erc.info,  Node: Introduction,  Next: Getting Started,  Prev: Top,  Up: Top
 
 1 Introduction
 **************
@@ -122,7 +120,7 @@ network, even if they are not in the same channels as you.
    • Track channel activity in the mode-line
 
 
-File: doc0ESekl.info,  Node: Getting Started,  Next: Keystroke Summary,  Prev: Introduction,  Up: Top
+File: erc.info,  Node: Getting Started,  Next: Keystroke Summary,  Prev: Introduction,  Up: Top
 
 2 Getting Started
 *****************
@@ -148,7 +146,7 @@ you want, do ‘M-x customize-variable <RET> erc-modules <RET>’.
 * Special Features::            Differences from standalone IRC clients
 
 
-File: doc0ESekl.info,  Node: Sample Session,  Next: Special Features,  Up: Getting Started
+File: erc.info,  Node: Sample Session,  Next: Special Features,  Up: Getting Started
 
 2.1 Sample Session
 ==================
@@ -235,7 +233,7 @@ ERC.
      and Reporting Bugs::.
 
 
-File: doc0ESekl.info,  Node: Special Features,  Prev: Sample Session,  Up: Getting Started
+File: erc.info,  Node: Special Features,  Prev: Sample Session,  Up: Getting Started
 
 2.2 Special Features
 ====================
@@ -304,7 +302,7 @@ ERC has some features that distinguish it from some IRC clients.
      switch to an ERC buffer and run the ‘/RECONNECT’ command.
 
 
-File: doc0ESekl.info,  Node: Keystroke Summary,  Next: Modules,  Prev: Getting Started,  Up: Top
+File: erc.info,  Node: Keystroke Summary,  Next: Modules,  Prev: Getting Started,  Up: Top
 
 3 Keys Used in ERC
 ******************
@@ -383,7 +381,7 @@ This is a summary of keystrokes available in every ERC buffer.
      Kill current input line using ‘erc-bol’ followed by ‘kill-line’.
 
 
-File: doc0ESekl.info,  Node: Modules,  Next: Advanced Usage,  Prev: Keystroke Summary,  Up: Top
+File: erc.info,  Node: Modules,  Next: Advanced Usage,  Prev: Keystroke Summary,  Up: Top
 
 4 Modules
 *********
@@ -655,7 +653,7 @@ incorrectly, with built-in modules moved from the predefined checklist
 to the user-provided free-form area.
 
 
-File: doc0ESekl.info,  Node: Advanced Usage,  Next: Getting Help and Reporting Bugs,  Prev: Modules,  Up: Top
+File: erc.info,  Node: Advanced Usage,  Next: Getting Help and Reporting Bugs,  Prev: Modules,  Up: Top
 
 5 Advanced Usage
 ****************
@@ -677,9 +675,8 @@ Integrations
 * auth-source::                 Retrieving auth-source entries with ERC.
 * display-buffer::              Controlling how ERC displays buffers.
 
-
 
-File: doc0ESekl.info,  Node: Connecting,  Next: SASL,  Up: Advanced Usage
+File: erc.info,  Node: Connecting,  Next: SASL,  Up: Advanced Usage
 
 5.1 Connecting to an IRC Server
 ===============================
@@ -933,7 +930,7 @@ human-friendly way suitable for UI components.
 make the most sense, but any reasonably printable object is acceptable.
 
 
-File: doc0ESekl.info,  Node: SASL,  Next: Sample Configuration,  Prev: Connecting,  Up: Advanced Usage
+File: erc.info,  Node: SASL,  Next: Sample Configuration,  Prev: Connecting,  Up: Advanced Usage
 
 5.2 Authenticating via SASL
 ===========================
@@ -1133,7 +1130,7 @@ generally not recommended.  Whatever the case, you'll probably want to
 temporarily disable ‘erc-server-auto-reconnect’ while experimenting.
 
 
-File: doc0ESekl.info,  Node: Sample Configuration,  Next: Integrations,  Prev: SASL,  Up: Advanced Usage
+File: erc.info,  Node: Sample Configuration,  Next: Integrations,  Prev: SASL,  Up: Advanced Usage
 
 5.3 Sample Configuration
 ========================
@@ -1253,7 +1250,6 @@ settings (*note Sample configuration via Customize::).
              (cl-pushnew (or target (erc-default-target) (current-buffer))
                          erc-track-exclude
                          :test #'equal)))
-
 
 Those familiar with ‘use-package’ may have noticed the lack of ‘:defer’
 keyword args.  This was done to conserve space, but you can just pretend
@@ -1413,7 +1409,7 @@ buffers to tell ERC whether to show activity from these buffers in the
 mode line.
 
 
-File: doc0ESekl.info,  Node: Integrations,  Next: Options,  Prev: Sample Configuration,  Up: Advanced Usage
+File: erc.info,  Node: Integrations,  Next: Options,  Prev: Sample Configuration,  Up: Advanced Usage
 
 5.4 Integrations
 ================
@@ -1510,7 +1506,7 @@ just set those options and variables globally and bind
      connectivity.
 
 
-File: doc0ESekl.info,  Node: auth-source,  Next: display-buffer,  Up: Integrations
+File: erc.info,  Node: auth-source,  Next: display-buffer,  Up: Integrations
 
 5.4.3 auth-source
 -----------------
@@ -1672,7 +1668,7 @@ first, try logging out.  And when in doubt, try using the Emacs command
 ‘GnuPG/stored-by’ entry with a value of ‘GnuPG Pinentry’ or similar.
 
 
-File: doc0ESekl.info,  Node: display-buffer,  Prev: auth-source,  Up: Integrations
+File: erc.info,  Node: display-buffer,  Prev: auth-source,  Up: Integrations
 
 5.4.4 display-buffer
 --------------------
@@ -1824,7 +1820,7 @@ Module-based (minor-mode) keys:
              − channel name as a string, e.g., ‘"#chan"’
 
 
-File: doc0ESekl.info,  Node: Options,  Prev: Integrations,  Up: Advanced Usage
+File: erc.info,  Node: Options,  Prev: Integrations,  Up: Advanced Usage
 
 5.5 Options
 ===========
@@ -1858,7 +1854,7 @@ out all the available options for ERC is to do ‘M-x customize-group
      considered a lurker.
 
 
-File: doc0ESekl.info,  Node: Getting Help and Reporting Bugs,  Next: History,  Prev: Advanced Usage,  Up: Top
+File: erc.info,  Node: Getting Help and Reporting Bugs,  Next: History,  Prev: Advanced Usage,  Up: Top
 
 6 Getting Help and Reporting Bugs
 *********************************
@@ -1915,7 +1911,7 @@ or if you have bugs to report, there are several places you can go.
    • To report a bug in ERC, use ‘M-x erc-bug’.
 
 
-File: doc0ESekl.info,  Node: History,  Next: GNU Free Documentation License,  Prev: Getting Help and Reporting Bugs,  Up: Top
+File: erc.info,  Node: History,  Next: GNU Free Documentation License,  Prev: Getting Help and Reporting Bugs,  Up: Top
 
 7 History
 *********
@@ -1997,7 +1993,7 @@ June 2021.  GNU and FSF's announcements about this are at
 <https://lists.gnu.org/archive/html/info-gnu-emacs/2021-06/msg00000.html>.
 
 
-File: doc0ESekl.info,  Node: GNU Free Documentation License,  Next: Concept Index,  Prev: History,  Up: Top
+File: erc.info,  Node: GNU Free Documentation License,  Next: Concept Index,  Prev: History,  Up: Top
 
 Appendix A GNU Free Documentation License
 *****************************************
@@ -2479,7 +2475,7 @@ software license, such as the GNU General Public License, to permit
 their use in free software.
 
 
-File: doc0ESekl.info,  Node: Concept Index,  Prev: GNU Free Documentation License,  Up: Top
+File: erc.info,  Node: Concept Index,  Prev: GNU Free Documentation License,  Up: Top
 
 Index
 *****
@@ -2495,7 +2491,7 @@ Index
 * configuration, sample:                 Sample Configuration.
                                                               (line   6)
 * configuration, via customize:          Sample Configuration.
-                                                              (line 130)
+                                                              (line 129)
 * connecting:                            Connecting.          (line   6)
 * display-buffer:                        display-buffer.      (line   6)
 * erc:                                   Connecting.          (line  10)
@@ -2567,50 +2563,50 @@ Index
 * URL:                                   Integrations.        (line  14)
 * username parameter:                    Connecting.          (line 171)
 
-
 
 Tag Table:
-Node: Top1012
-Node: Introduction2922
-Node: Getting Started4799
-Node: Sample Session5977
-Node: Special Features10139
-Node: Keystroke Summary12371
-Node: Modules15032
-Ref: Auxiliary Modules18361
-Ref: Required Modules19104
-Ref: Local Modules19442
-Ref: Module Loading22660
-Node: Advanced Usage25252
-Node: Connecting26046
-Ref: client-certificate27722
-Ref: username parameter31979
-Ref: password parameter32574
-Ref: server password32574
-Ref: Network Identifier34611
-Node: SASL35693
-Ref: SASL auth-source function40161
-Node: Sample Configuration45202
-Ref: Sample configuration via Customize50466
-Node: Integrations59194
-Ref: URL59493
-Ref: SOCKS60387
-Node: auth-source63511
-Ref: auth-source Server Password64156
-Ref: auth-source functions68637
-Ref: auth-source Troubleshooting70002
-Node: display-buffer71389
-Node: Options77800
-Node: Getting Help and Reporting Bugs78929
-Ref: Upgrading79941
-Node: History81847
-Ref: Official IRC channels84008
-Node: GNU Free Documentation License84679
-Node: Concept Index109836
+Node: Top1004
+Node: Introduction2907
+Node: Getting Started4778
+Node: Sample Session5950
+Node: Special Features10106
+Node: Keystroke Summary12332
+Node: Modules14987
+Ref: Auxiliary Modules18310
+Ref: Required Modules19053
+Ref: Local Modules19391
+Ref: Module Loading22609
+Node: Advanced Usage25201
+Node: Connecting25988
+Ref: client-certificate27658
+Ref: username parameter31915
+Ref: password parameter32510
+Ref: server password32510
+Ref: Network Identifier34547
+Node: SASL35629
+Ref: SASL auth-source function40091
+Node: Sample Configuration45132
+Ref: Sample configuration via Customize50389
+Node: Integrations59117
+Ref: URL59410
+Ref: SOCKS60304
+Node: auth-source63428
+Ref: auth-source Server Password64067
+Ref: auth-source functions68548
+Ref: auth-source Troubleshooting69913
+Node: display-buffer71300
+Node: Options77705
+Node: Getting Help and Reporting Bugs78828
+Ref: Upgrading79834
+Node: History81740
+Ref: Official IRC channels83895
+Node: GNU Free Documentation License84566
+Node: Concept Index109717
 
 End Tag Table
 
 
 Local Variables:
 coding: utf-8
+Info-documentlanguage: en
 End:
