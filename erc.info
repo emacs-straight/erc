@@ -1,6 +1,6 @@
 This is erc.info, produced by makeinfo version 7.2 from erc.texi.
 
-This manual is for ERC 5.6.2 from GNU ELPA.
+This manual is for ERC 5.7 from GNU ELPA.
 
    Copyright © 2005-2026 Free Software Foundation, Inc.
 
@@ -28,7 +28,7 @@ File: erc.info,  Node: Top,  Next: Introduction,  Up: (dir)
 ERC
 ***
 
-This manual is for ERC 5.6.2 from GNU ELPA.
+This manual is for ERC 5.7 from GNU ELPA.
 
    Copyright © 2005-2026 Free Software Foundation, Inc.
 
@@ -2565,43 +2565,43 @@ Index
 
 
 Tag Table:
-Node: Top1004
-Node: Introduction2907
-Node: Getting Started4778
-Node: Sample Session5950
-Node: Special Features10106
-Node: Keystroke Summary12332
-Node: Modules14987
-Ref: Auxiliary Modules18310
-Ref: Required Modules19053
-Ref: Local Modules19391
-Ref: Module Loading22609
-Node: Advanced Usage25201
-Node: Connecting25988
-Ref: client-certificate27658
-Ref: username parameter31915
-Ref: password parameter32510
-Ref: server password32510
-Ref: Network Identifier34547
-Node: SASL35629
-Ref: SASL auth-source function40091
-Node: Sample Configuration45132
-Ref: Sample configuration via Customize50389
-Node: Integrations59117
-Ref: URL59410
-Ref: SOCKS60304
-Node: auth-source63428
-Ref: auth-source Server Password64067
-Ref: auth-source functions68548
-Ref: auth-source Troubleshooting69913
-Node: display-buffer71300
-Node: Options77705
-Node: Getting Help and Reporting Bugs78828
-Ref: Upgrading79834
-Node: History81740
-Ref: Official IRC channels83895
-Node: GNU Free Documentation License84566
-Node: Concept Index109717
+Node: Top1002
+Node: Introduction2903
+Node: Getting Started4774
+Node: Sample Session5946
+Node: Special Features10102
+Node: Keystroke Summary12328
+Node: Modules14983
+Ref: Auxiliary Modules18306
+Ref: Required Modules19049
+Ref: Local Modules19387
+Ref: Module Loading22605
+Node: Advanced Usage25197
+Node: Connecting25984
+Ref: client-certificate27654
+Ref: username parameter31911
+Ref: password parameter32506
+Ref: server password32506
+Ref: Network Identifier34543
+Node: SASL35625
+Ref: SASL auth-source function40087
+Node: Sample Configuration45128
+Ref: Sample configuration via Customize50385
+Node: Integrations59113
+Ref: URL59406
+Ref: SOCKS60300
+Node: auth-source63424
+Ref: auth-source Server Password64063
+Ref: auth-source functions68544
+Ref: auth-source Troubleshooting69909
+Node: display-buffer71296
+Node: Options77701
+Node: Getting Help and Reporting Bugs78824
+Ref: Upgrading79830
+Node: History81736
+Ref: Official IRC channels83891
+Node: GNU Free Documentation License84562
+Node: Concept Index109713
 
 End Tag Table
 
