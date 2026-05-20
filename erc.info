@@ -1,4 +1,4 @@
-This is erc.info, produced by makeinfo version 7.2 from erc.texi.
+This is erc.info, produced by makeinfo version 7.1.1 from erc.texi.
 
 This manual is for ERC 5.7 from GNU ELPA.
 
@@ -72,6 +72,7 @@ Advanced Usage
 * Sample Configuration::        An example configuration file.
 * Integrations::                Integrations available for ERC.
 * Options::                     Options that are available for ERC.
+
 
 
 File: erc.info,  Node: Introduction,  Next: Getting Started,  Prev: Top,  Up: Top
@@ -675,6 +676,7 @@ Integrations
 * auth-source::                 Retrieving auth-source entries with ERC.
 * display-buffer::              Controlling how ERC displays buffers.
 
+
 
 File: erc.info,  Node: Connecting,  Next: SASL,  Up: Advanced Usage
 
@@ -1250,6 +1252,7 @@ settings (*note Sample configuration via Customize::).
              (cl-pushnew (or target (erc-default-target) (current-buffer))
                          erc-track-exclude
                          :test #'equal)))
+
 
 Those familiar with ‘use-package’ may have noticed the lack of ‘:defer’
 keyword args.  This was done to conserve space, but you can just pretend
@@ -2491,7 +2494,7 @@ Index
 * configuration, sample:                 Sample Configuration.
                                                               (line   6)
 * configuration, via customize:          Sample Configuration.
-                                                              (line 129)
+                                                              (line 130)
 * connecting:                            Connecting.          (line   6)
 * display-buffer:                        display-buffer.      (line   6)
 * erc:                                   Connecting.          (line  10)
@@ -2563,50 +2566,50 @@ Index
 * URL:                                   Integrations.        (line  14)
 * username parameter:                    Connecting.          (line 171)
 
+
 
 Tag Table:
-Node: Top1002
-Node: Introduction2903
-Node: Getting Started4774
-Node: Sample Session5946
-Node: Special Features10102
-Node: Keystroke Summary12328
-Node: Modules14983
-Ref: Auxiliary Modules18306
-Ref: Required Modules19049
-Ref: Local Modules19387
-Ref: Module Loading22605
-Node: Advanced Usage25197
-Node: Connecting25984
-Ref: client-certificate27654
-Ref: username parameter31911
-Ref: password parameter32506
-Ref: server password32506
-Ref: Network Identifier34543
-Node: SASL35625
-Ref: SASL auth-source function40087
-Node: Sample Configuration45128
-Ref: Sample configuration via Customize50385
-Node: Integrations59113
-Ref: URL59406
-Ref: SOCKS60300
-Node: auth-source63424
-Ref: auth-source Server Password64063
-Ref: auth-source functions68544
-Ref: auth-source Troubleshooting69909
-Node: display-buffer71296
-Node: Options77701
-Node: Getting Help and Reporting Bugs78824
-Ref: Upgrading79830
-Node: History81736
-Ref: Official IRC channels83891
-Node: GNU Free Documentation License84562
-Node: Concept Index109713
+Node: Top1004
+Node: Introduction2906
+Node: Getting Started4777
+Node: Sample Session5949
+Node: Special Features10105
+Node: Keystroke Summary12331
+Node: Modules14986
+Ref: Auxiliary Modules18309
+Ref: Required Modules19052
+Ref: Local Modules19390
+Ref: Module Loading22608
+Node: Advanced Usage25200
+Node: Connecting25988
+Ref: client-certificate27658
+Ref: username parameter31915
+Ref: password parameter32510
+Ref: server password32510
+Ref: Network Identifier34547
+Node: SASL35629
+Ref: SASL auth-source function40091
+Node: Sample Configuration45132
+Ref: Sample configuration via Customize50390
+Node: Integrations59118
+Ref: URL59411
+Ref: SOCKS60305
+Node: auth-source63429
+Ref: auth-source Server Password64068
+Ref: auth-source functions68549
+Ref: auth-source Troubleshooting69914
+Node: display-buffer71301
+Node: Options77706
+Node: Getting Help and Reporting Bugs78829
+Ref: Upgrading79835
+Node: History81741
+Ref: Official IRC channels83896
+Node: GNU Free Documentation License84567
+Node: Concept Index109718
 
 End Tag Table
 
 
 Local Variables:
 coding: utf-8
-Info-documentlanguage: en
 End:
